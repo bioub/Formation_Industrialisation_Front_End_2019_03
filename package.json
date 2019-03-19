@@ -11,12 +11,15 @@
     "lint-staged": "^8.1.5",
     "live-server": "^1.2.1",
     "node-sass": "^4.11.0",
-    "prettier": "1.16.4"
+    "prettier": "1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0"
   },
   "scripts": {
     "serve": "hs src -p 8000",
     "serve:dev": "live-server src --mount=/node_modules:node_modules",
     "lint:html": "htmlhint src/**/*.html",
+    "lint:scss": "stylelint src/**/*.scss",
     "format": "prettier src/**/*.{html,css,scss,js,ts} --write",
     "build:scss": "node-sass --output src/css src/scss/app.scss",
     "watch:scss": "node-sass --watch --output src/css src/scss/app.scss"

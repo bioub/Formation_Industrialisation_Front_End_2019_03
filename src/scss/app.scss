@@ -1,8 +1,13 @@
-$bodyBgColor: beige;
 @import "bootstrap";
+
+$bodyBgColor: beige;
 
 body {
   background-color: $bodyBgColor;
+}
+
+a {
+  color: darkmagenta !important;
 }
 
 .container-fluid {
@@ -11,8 +16,12 @@ body {
   .row {
     margin: 0;
 
+    a {
+      color: darkcyan;
+    }
+
     &:last-child {
-      background-color: darksalmon;
+      background-color: $link-color;
     }
   }
 }
