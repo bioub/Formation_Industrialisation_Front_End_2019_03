@@ -10,13 +10,16 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
     "prettier": "1.16.4"
   },
   "scripts": {
     "serve": "hs src -p 8000",
     "serve:dev": "live-server src --mount=/node_modules:node_modules",
     "lint:html": "htmlhint src/**/*.html",
-    "format": "prettier src/**/*.{html,css,scss,js,ts} --write"
+    "format": "prettier src/**/*.{html,css,scss,js,ts} --write",
+    "build:scss": "node-sass --output src/css src/scss/app.scss",
+    "watch:scss": "node-sass --watch --output src/css src/scss/app.scss"
   },
   "husky": {
     "hooks": {
@@ -25,7 +28,10 @@
     }
   },
   "lint-staged": {
-    "*.{html,css,scss,js,ts}": ["prettier --write", "git add"]
+    "*.{html,css,scss,js,ts}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "printWidth": 120

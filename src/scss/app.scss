@@ -1,0 +1,18 @@
+$bodyBgColor: beige;
+@import "bootstrap";
+
+body {
+  background-color: $bodyBgColor;
+}
+
+.container-fluid {
+  font-weight: 500;
+
+  .row {
+    margin: 0;
+
+    &:last-child {
+      background-color: darksalmon;
+    }
+  }
+}
