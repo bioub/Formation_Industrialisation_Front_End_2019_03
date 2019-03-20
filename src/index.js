@@ -1,5 +1,4 @@
-"use strict";
-const validateEmail = require("./js/validation").validateEmail;
+import { validateEmail } from "./js/validation";
 
 const emailInputElt = document.querySelector("input[type=email]");
 

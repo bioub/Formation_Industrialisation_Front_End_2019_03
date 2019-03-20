@@ -10,9 +10,12 @@ a {
   color: darkmagenta !important;
 }
 
+// BEM
+// .container-fluid
 .container-fluid {
   font-weight: 500;
 
+  // .container-fluid__row
   .row {
     margin: 0;
 
@@ -20,6 +23,7 @@ a {
       color: darkcyan;
     }
 
+    // .container-fluid__row--last
     &:last-child {
       background-color: $link-color;
     }

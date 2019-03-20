@@ -1,8 +1,6 @@
-// (function (exports, require, module, __filename, __dirname) {
-
-"use strict";
-
 const charEmail = "@";
+
+export const toto = "TOTO";
 
 /**
  * Valide un email
@@ -13,6 +11,4 @@ function validateEmail(email) {
   return email.indexOf(charEmail) !== -1;
 }
 
-exports.validateEmail = validateEmail;
-
-// });
+export { validateEmail };
