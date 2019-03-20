@@ -1,13 +1,9 @@
-// Module IIFE
-// Immediately Invoked Function Expression
-(function() {
-  const emailInputElt = document.querySelector("input[type=email]");
+"use strict";
+const validateEmail = require("./js/validation").validateEmail;
 
-  console.log(validateEmail);
+const emailInputElt = document.querySelector("input[type=email]");
 
-  emailInputElt.addEventListener("blur", () => {
-    const value = emailInputElt.value;
-
-    console.log(validateEmail(value));
-  });
-})();
+emailInputElt.addEventListener("blur", event => {
+  const value = emailInputElt.value;
+  console.log(validateEmail(value));
+});

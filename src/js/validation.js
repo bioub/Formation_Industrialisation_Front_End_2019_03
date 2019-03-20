@@ -1,14 +1,18 @@
-(function() {
-  const charEmail = "@";
+// (function (exports, require, module, __filename, __dirname) {
 
-  /**
-   * Valide un email
-   * @param {string} email L'email à valider
-   * @returns {boolean} true si le mail est valide
-   */
-  function validateEmail(email) {
-    return email.indexOf(charEmail) !== -1;
-  }
+"use strict";
 
-  window.validateEmail = validateEmail;
-})();
+const charEmail = "@";
+
+/**
+ * Valide un email
+ * @param {string} email L'email à valider
+ * @returns {boolean} true si le mail est valide
+ */
+function validateEmail(email) {
+  return email.indexOf(charEmail) !== -1;
+}
+
+exports.validateEmail = validateEmail;
+
+// });
