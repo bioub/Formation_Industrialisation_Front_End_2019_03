@@ -1,3 +1,5 @@
+import "core-js/features/string/includes";
+
 const charEmail = "@";
 
 export const toto = "TOTO";
@@ -8,7 +10,7 @@ export const toto = "TOTO";
  * @returns {boolean} true si le mail est valide
  */
 function validateEmail(email) {
-  return email.indexOf(charEmail) !== -1;
+  return email.includes(charEmail);
 }
 
 export { validateEmail };

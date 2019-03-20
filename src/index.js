@@ -2,7 +2,12 @@ import { validateEmail } from "./js/validation";
 
 const emailInputElt = document.querySelector("input[type=email]");
 
-emailInputElt.addEventListener("blur", event => {
+emailInputElt.addEventListener("blur", () => {
   const value = emailInputElt.value;
-  console.log(validateEmail(value));
+
+  emailInputElt.classList.remove("is-invalid");
+
+  if (!validateEmail(value)) {
+    emailInputElt.classList.add("is-invalid");
+  }
 });
