@@ -1,8 +1,8 @@
-import "core-js/features/string/includes";
+import 'core-js/features/string/includes';
 
-const charEmail = "@";
+const charEmail = '@';
 
-export const toto = "TOTO";
+export const toto = 'TOTO';
 
 /**
  * Valide un email

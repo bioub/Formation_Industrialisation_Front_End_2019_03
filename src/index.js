@@ -1,13 +1,21 @@
-import { validateEmail } from "./js/validation";
+import './scss/app.scss';
 
-const emailInputElt = document.querySelector("input[type=email]");
+import { Clock } from './js/horloge';
 
-emailInputElt.addEventListener("blur", () => {
+const emailInputElt = document.querySelector('input[type=email]');
+
+emailInputElt.addEventListener('blur', async () => {
   const value = emailInputElt.value;
 
-  emailInputElt.classList.remove("is-invalid");
+  emailInputElt.classList.remove('is-invalid');
+
+  const { validateEmail } = await import('./js/validation');
 
   if (!validateEmail(value)) {
-    emailInputElt.classList.add("is-invalid");
+    emailInputElt.classList.add('is-invalid');
   }
 });
+
+const horlogeElt = document.querySelector('.navbar-nav:last-child .nav-link');
+const clock = new Clock(horlogeElt);
+clock.start();

@@ -1,8 +1,9 @@
-@import "bootstrap";
+@import 'bootstrap';
 
 $bodyBgColor: beige;
 
 body {
+  user-select: none;
   background-color: $bodyBgColor;
 }
 
